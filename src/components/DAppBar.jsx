@@ -13,6 +13,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useLocation, useNavigate } from 'react-router-dom';
 import colors from '../constants/colors';
 import SizedBox from './SizedBox';
+import logo from '../assets/images/logo.png'
 
 const pages = ['Home', 'News', 'Team', 'Research', 'Publications', 'Opportunities', 'Resources'];
 const paths = ['/', '/news', '/team', '/research', '/publications', '/opportunities', '/resources'];
@@ -50,7 +51,7 @@ function DAppBar() {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src="https://a-narayan.github.io/assets/img/favicon.ico" style={{ maxWidth: '20px', maxHeight: '20px' }} />
+                    <img src={logo} style={{ maxWidth: '20px', maxHeight: '20px' }} />
                     <SizedBox width={'8px'} />
                     <Typography
                         variant="h6"

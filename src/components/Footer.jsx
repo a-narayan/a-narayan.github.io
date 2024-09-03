@@ -4,6 +4,7 @@ import { Button, Grid } from '@mui/material'
 import DText from './DText'
 import SizedBox from './SizedBox';
 import { useNavigate } from 'react-router-dom'
+import logo from '../assets/images/logo.png'
 
 const Footer = () => {
 
@@ -55,7 +56,7 @@ const Footer = () => {
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src="https://a-narayan.github.io/assets/img/favicon.ico" style={{ maxWidth: '25px', maxHeight: '25px' }} />
+                            <img src={logo} style={{ maxWidth: '25px', maxHeight: '25px' }} />
                             <SizedBox width={'8px'} />
                             <DText variant='subHeading'>IDSL</DText>
                         </div>
