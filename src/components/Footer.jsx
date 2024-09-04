@@ -57,6 +57,7 @@ const Footer = () => {
                         <Button variant='text' sx={{ textTransform: 'none', fontSize: '16px' }} onClick={() => navigate('/publications')}>Publications</Button>
                         <Button variant='text' sx={{ textTransform: 'none', fontSize: '16px' }} onClick={() => navigate('/opportunities')}>Opportunities</Button>
                         <Button variant='text' sx={{ textTransform: 'none', fontSize: '16px' }} onClick={() => navigate('/resources')}>Resources</Button>
+                        <Button variant='text' sx={{ textTransform: 'none', fontSize: '16px' }} onClick={() => navigate('/login')}>Login</Button>
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>

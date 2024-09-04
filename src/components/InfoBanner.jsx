@@ -36,12 +36,24 @@ const InfoBanner = () => {
                 <DText>Dr. Apurva Narayan leads the IDSL research group. He is an assistant professor in the Department of Computer Science at Western University and affiliate assistant professor in the Department of Computer Science and School of Engineering at the University of British Columbia, as well as an adjunct assistant professor in the Department of Systems Design Engineering at the University of Waterloo (UW).</DText>
                 <SizedBox height={'1rem'} />
                 <div style={{ display: 'flex' }}>
-                    <LinkdinIcon />
-                    <SizedBox width={'8px'}/>
-                    <XIcon />
+                    <div style={{cursor: 'pointer'}} onClick={() => {
+                        var win = window.open("https://www.linkedin.com/in/apurva-narayan-44308b17/", '_blank');
+                        win.focus();
+                    }}>
+                        <LinkdinIcon />
+                    </div>
+
+                    <SizedBox width={'8px'} />
+
+                    <div style={{cursor: 'pointer'}} onClick={() => {
+                        // var win = window.open("https://twitter.com/appu0507?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", '_blank');
+                        // win.focus();
+                    }}>
+                        <XIcon />
+                    </div>
+                    
                 </div>
                 <SizedBox height={'8px'} />
-                {/* <Button variant='text' sx={{p: '0'}}>Read More</Button> */}
             </Box>
         </Box>
     )
