@@ -12,7 +12,7 @@ const Welcome = () => {
             <SizedBox height={'2rem'} />
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={3} md={2} sx={{display: 'flex', alignItems: 'start', justifyContent: 'center'}}>
-                    <img src='https://a-narayan.github.io/assets/profile/apurva.jpg' style={{ width: '150px', height: '150px', borderRadius: '150px' }} />
+                    <img src='https://github.com/a-narayan/a-narayan-old.github.io/blob/master/assets/profile/apurva.jpg?raw=true' style={{ width: '150px', height: '150px', borderRadius: '150px' }} />
                 </Grid>
                 <Grid item xs={12} sm={9} md={10}>
                     <InfoBanner />

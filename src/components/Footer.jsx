@@ -4,7 +4,8 @@ import { Button, Grid } from '@mui/material'
 import DText from './DText'
 import SizedBox from './SizedBox';
 import { useNavigate } from 'react-router-dom'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/favicon.ico'
+import colors from '../constants/colors';
 
 const Footer = () => {
 
@@ -19,19 +20,22 @@ const Footer = () => {
                         <SizedBox height={'1rem'} />
                         <DText variant='body2' weight='bold'>Apurva Narayan</DText>
                         <DText variant='body2'>Assistant Professor</DText>
-                        <DText>Department of Computer Science & Department of Electrical and Computer Engineering</DText>
+                        <DText>
+                            <a style={{textDecoration: 'none', color: colors.dColor2}} href='https://www.csd.uwo.ca//'>Department of Computer Science</a> & 
+                            <a style={{textDecoration: 'none', color: colors.dColor2}} href='https://www.eng.uwo.ca/electrical//index.html'> Department of Electrical and Computer Engineering</a>
+                        </DText>
                         <DText>Western University</DText>
                         <SizedBox height={'1rem'} />
                         <DText>Affiliate Assistant Professor</DText>
-                        <DText>Department of Computer Science</DText>
+                        <DText><a style={{textDecoration: 'none', color: colors.dColor2}} href='https://cmps.ok.ubc.ca/'>Department of Computer Science</a></DText>
                         <DText>University of British Columbia</DText>
                         <SizedBox height={'1rem'} />
                         <DText>Associate Faculty</DText>
-                        <DText>School of Engineering</DText>
+                        <DText><a style={{textDecoration: 'none', color: colors.dColor2}} href='https://engineering.ok.ubc.ca/'>School of Engineering</a></DText>
                         <DText>University of British Columbia</DText>
                         <SizedBox height={'1rem'} />
                         <DText>Adjunct Assistant Professor</DText>
-                        <DText>Department of Systems Design Engineering</DText>
+                        <DText><a style={{textDecoration: 'none', color: colors.dColor2}} href='https://uwaterloo.ca/systems-design-engineering/'>Department of Systems Design Engineering</a></DText>
                         <DText>University of Waterloo</DText>
                         <SizedBox height={'1rem'} />
                         <DText weight='bold'>Phone</DText>

@@ -32,6 +32,7 @@ const Home = () => {
         <div>
             <TopHeading />
             <Welcome />
+            <IDSLResearch />
             <SectionWrapper>
                 {data.map((item, index) =>
                     <div>
@@ -46,8 +47,8 @@ const Home = () => {
                     </div>
                 )}
             </SectionWrapper>
-            {/* <IDSLResearch />
-            <Recruitment /> */}
+            
+            {/* <Recruitment /> */}
             <Highlights />
             <News />
         </div>

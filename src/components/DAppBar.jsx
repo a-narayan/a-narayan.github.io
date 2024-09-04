@@ -13,7 +13,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useLocation, useNavigate } from 'react-router-dom';
 import colors from '../constants/colors';
 import SizedBox from './SizedBox';
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/favicon.ico'
 
 const pages = ['Home', 'News', 'Team', 'Research', 'Publications', 'Opportunities', 'Resources'];
 const paths = ['/', '/news', '/team', '/research', '/publications', '/opportunities', '/resources'];

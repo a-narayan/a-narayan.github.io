@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom'
 
 const IDSLResearch = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
-        <SectionWrapper>
+        <SectionWrapper showBottomLine={false}>
             <DText variant='subHeading'>IDSL Research</DText>
             <SizedBox height={'1rem'} />
             <DText variant='body1'>Our research bridges together intelligent systems, data science, software engineering, and decision making under uncertainty.</DText>
@@ -18,19 +18,19 @@ const IDSLResearch = () => {
             <SizedBox height={'1rem'} />
             <Grid container spacing={4}>
                 <Grid item xs={6} sm={6} md={3}>
-                    <DCard imageUrl={'https://a-narayan.github.io/assets/img/da.png'} text={'Data Analytics'} />
+                    <DCard imageUrl={'https://github.com/a-narayan/a-narayan-old.github.io/blob/master/assets/img/da.png?raw=true'} text={'Data Analytics'} />
                 </Grid>
                 <Grid item xs={6} sm={6} md={3}>
-                    <DCard imageUrl={'https://a-narayan.github.io/assets/img/swe.png'} text={'Software Engineering'} />
+                    <DCard imageUrl={'https://github.com/a-narayan/a-narayan-old.github.io/blob/master/assets/img/swe.png?raw=true'} text={'Software Engineering'} />
                 </Grid>
                 <Grid item xs={6} sm={6} md={3}>
-                    <DCard imageUrl={'https://a-narayan.github.io/assets/img/ml.png'} text={'Machine Learning'} />
+                    <DCard imageUrl={'https://github.com/a-narayan/a-narayan-old.github.io/blob/master/assets/img/ml.png?raw=true'} text={'Machine Learning'} />
                 </Grid>
                 <Grid item xs={6} sm={6} md={3}>
-                    <DCard imageUrl={'https://a-narayan.github.io/assets/img/ai.png'} text={'Trustworthy and Safe AI'} />
+                    <DCard imageUrl={'https://github.com/a-narayan/a-narayan-old.github.io/blob/master/assets/img/ai.png?raw=true'} text={'Trustworthy and Safe AI'} />
                 </Grid>
             </Grid>
-            <SizedBox height={'3rem'} />
+            {/* <SizedBox height={'3rem'} />
             <Description
                 heading={'Research Themes'}
                 data={[
@@ -40,7 +40,7 @@ const IDSLResearch = () => {
                 ]} />
             <DButton onClick={() => {
                 navigate('/research');
-            }}>IDSL Research</DButton>
+            }}>IDSL Research</DButton> */}
         </SectionWrapper>
     )
 }

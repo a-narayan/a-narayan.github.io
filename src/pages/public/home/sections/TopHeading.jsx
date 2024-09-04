@@ -2,7 +2,7 @@ import React from 'react'
 import { SectionWrapper, SizedBox } from '../../../../components'
 import { Typography } from '@mui/material'
 import colors from '../../../../constants/colors'
-import logo from '../../../../assets/images/logo.png'
+import logo from '../../../../assets/images/favicon.ico'
 
 const TopHeading = () => {
   return (
