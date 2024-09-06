@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AdminAddNews, AdminDashboard, AdminHome, AdminNews, AdminNewsDetails, AdminOpportunities, AdminPublications, AdminResearch, AdminResources, AdminTeam, Home, Login, News, NewsDetails, Opportunities, Publications, Research, Resources, StudentDashboard, Team, TeamMemberDetails } from './pages';
 import { DAppBar, Footer, MessageDialog } from './components';
 import ScrollToTop from './utils/scroll-to-top';
