@@ -51,13 +51,13 @@ function DAppBar() {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src={logo} style={{ maxWidth: '20px', maxHeight: '20px' }} />
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, }}>
+                        <img src={logo} style={{ display: { xs: 'none', md: 'flex' }, maxWidth: '20px', maxHeight: '20px' }} />
+                    </Box>
                     <SizedBox width={'8px'} />
                     <Typography
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -109,12 +109,13 @@ function DAppBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Box sx={{ display: { xs: 'flex', md: 'none' }, }}>
+                        <img src={logo} style={{ display: { xs: 'none', md: 'flex' }, maxWidth: '20px', maxHeight: '20px' }} />
+                    </Box>
+                    <SizedBox width={'8px'} />
                     <Typography
                         variant="h5"
                         noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -122,11 +123,11 @@ function DAppBar() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: colors.dColor2,
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        IDSL
                     </Typography>
                     <Box sx={{ display: 'flex', height: '4.5rem', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
