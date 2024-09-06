@@ -17,10 +17,7 @@ const MoveToAlumniDialog = ({ open, handleClose, id, degree, name }) => {
                 isAlumni: true,
             });
             await runTransaction(db, async (transaction) => {
-                console.log('here...');
-                console.log(year);
                 const sfDoc = await transaction.get(doc(db, 'alumni', year.toString()));
-                console.log(sfDoc);
                 if (!sfDoc.exists()) {
                     transaction.set(doc(db, 'alumni', year.toString()), {
                         year,
@@ -37,12 +34,13 @@ const MoveToAlumniDialog = ({ open, handleClose, id, degree, name }) => {
                         name: alumniName,
                         positionAfterLeaving
                     });
-                    transaction.update(doc(db, 'alumni', year), {
+                    transaction.update(doc(db, 'alumni', year.toString()), {
                         alumnus
                     })
                 }
             });
             console.log("Transaction successfully committed!");
+            handleClose();
         } catch (e) {
             console.log("Transaction failed: ", e);
         }
