@@ -122,9 +122,21 @@ const StudentDashboard = () => {
 
       <DText variant='body1' weight='bold'>Change Password</DText>
       <SizedBox height={'1rem'} />
-      <DTextField helperText={'Password'} value={currentPassword} onChange={(val) => setCurrentPassword(val)} />
+      <DTextField
+        helperText={'Password'}
+        value={currentPassword}
+        onChange={(val) => setCurrentPassword(val)}
+        inputMode='password'
+        isPassword={true}
+      />
       <SizedBox height={'1rem'} />
-      <DTextField helperText={'New Password'} value={newPassword} onChange={(val) => setNewPassword(val)} />
+      <DTextField
+        helperText={'New Password'}
+        value={newPassword}
+        onChange={(val) => setNewPassword(val)}
+        inputMode='password'
+        isPassword={true}
+      />
       <SizedBox height={'1rem'} />
       <DButton fullWidth onClick={changePassword}>Change Password</DButton>
     </SectionWrapper>

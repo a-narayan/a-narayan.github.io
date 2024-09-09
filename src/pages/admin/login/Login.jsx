@@ -62,8 +62,9 @@ const Login = () => {
             <DTextField
                 helperText={'Password'}
                 maxWidth={'sm'}
-                inputMode='password'
+                inputMode={'password'}
                 onChange={(val) => setPassword(val)}
+                isPassword={true}
             />
             <SizedBox height={'1rem'} />
             <DButton onClick={handleLogin}>Login</DButton>

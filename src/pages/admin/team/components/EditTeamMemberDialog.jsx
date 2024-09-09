@@ -99,7 +99,13 @@ const EditTeamMemberDialog = ({ dialogOpen, handleDialogClose, isEdit, id, image
                 <DTextField helperText={'Email ID'} value={memberEmailId} onChange={(val) => setMemberEmailId(val)} />
                 <SizedBox height={'1rem'} />
                 {!isEdit && <div>
-                    <DTextField helperText={'Password'} value={password} onChange={(val) => setPassword(val)} />
+                    <DTextField
+                        helperText={'Password'}
+                        value={password}
+                        onChange={(val) => setPassword(val)}
+                        inputMode='password'
+                        isPassword={true}
+                    />
                     <SizedBox height={'1rem'} />
                 </div>}
 
@@ -120,7 +126,13 @@ const EditTeamMemberDialog = ({ dialogOpen, handleDialogClose, isEdit, id, image
                 {isEdit && <div>
                     <DText variant='body1' weight='bold'>Reset Password</DText>
                     <SizedBox height={'1rem'} />
-                    <DTextField helperText={'New Password'} value={password} onChange={(val) => setPassword(val)} />
+                    <DTextField
+                        helperText={'New Password'}
+                        value={password}
+                        onChange={(val) => setPassword(val)}
+                        inputMode='password'
+                        isPassword={true}
+                    />
                     <SizedBox height={'1rem'} />
                 </div>}
                 <DButton fullWidth onClick={saveMemberDetails}>Save</DButton>
