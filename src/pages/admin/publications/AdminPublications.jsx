@@ -10,6 +10,8 @@ import PublicationDialog from './components/PublicationDialog';
 import { useNavigate, useParams } from 'react-router-dom';
 import WebsiteEditor from '../admin-components/WebsiteEditor';
 import { useAlerts } from '../../../hooks/useAlerts';
+import { Grid } from '@mui/material';
+import MultiplePublicationsDialog from './components/MultiplePublicationsDialog';
 
 const AdminPublications = () => {
 
@@ -24,6 +26,8 @@ const AdminPublications = () => {
   const [publicationDialogIsEdit, setPublicationDialogIsEdit] = useState(false);
   const [publicationDialogIndex, setPublicationDialogIndex] = useState(-1);
   const [data, setData] = useState([]);
+
+  const [multiplePublicationsDialogOpen, setMultiplePublicationsDialogOpen] = useState(false);
 
   // Dialog states
   const [publicationType, setPublicationType] = useState('');
@@ -65,7 +69,8 @@ const AdminPublications = () => {
           }
         );
       })
-      setPublications(newPubs);
+      const newPubsReversed = newPubs.reverse();
+      setPublications(newPubsReversed);
     }
   };
 
@@ -107,23 +112,38 @@ const AdminPublications = () => {
           });
         }}
       />
-      <SizedBox height={'1rem'} />
-      <DButton
-        onClick={() => {
-          setPublicationType('');
-          setBibText('');
-          setAddedLinkTypes(['']);
-          setAddedLinks(['']);
-          setYear('');
-          setPublicationDialogIsEdit(false);
-          setPublicationDialogOpen(true);
-        }}
-      >
-        Add New Publication
-      </DButton>
+      <SizedBox height={'2rem'} />
+
+      <Grid container spacing={2}>
+        <Grid item>
+          <DButton
+            onClick={() => {
+              setPublicationType('');
+              setBibText('');
+              setAddedLinkTypes(['']);
+              setAddedLinks(['']);
+              setYear('');
+              setPublicationDialogIsEdit(false);
+              setPublicationDialogOpen(true);
+            }}
+          >
+            Add New Publication
+          </DButton>
+        </Grid>
+        <Grid item>
+          <DButton
+            onClick={() => {
+              setMultiplePublicationsDialogOpen(true);
+            }}
+          >
+            Add Multiple Publications
+          </DButton>
+        </Grid>
+      </Grid>
+
       <SizedBox height={'2rem'} />
       {publications !== undefined && publications.length > 0 && publications.map((publication, index) => <AdminPublication
-        key={publication.title}
+        key={index}
         index={index}
         publicationType={publication.publicationType}
         title={publication.title}
@@ -158,6 +178,12 @@ const AdminPublications = () => {
         setAddedLinks={setAddedLinks}
         year={year}
         setYear={setYear}
+      />
+
+      <MultiplePublicationsDialog
+        open={multiplePublicationsDialogOpen}
+        setOpen={setMultiplePublicationsDialogOpen}
+        fetchPublications={fetchPublications}
       />
     </SectionWrapper>
   )
