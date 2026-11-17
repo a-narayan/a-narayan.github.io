@@ -43,7 +43,6 @@ const TopHeading = () => {
             sx={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 1.25,
               px: 2,
               py: 0.75,
               borderRadius: '9999px',
@@ -54,21 +53,6 @@ const TopHeading = () => {
               mb: 3.5,
             }}
           >
-            <Box
-              sx={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                backgroundColor: '#06B6D4',
-                boxShadow: '0 0 10px #06B6D4',
-                animation: 'pulse 2s infinite',
-                '@keyframes pulse': {
-                  '0%': { opacity: 1, transform: 'scale(1)' },
-                  '50%': { opacity: 0.4, transform: 'scale(0.85)' },
-                  '100%': { opacity: 1, transform: 'scale(1)' },
-                },
-              }}
-            />
             <Typography
               variant="caption"
               sx={{
@@ -79,7 +63,7 @@ const TopHeading = () => {
                 color: isDark ? '#93C5FD' : '#1D4ED8',
               }}
             >
-              Intelligent Data Science Lab · Western • UBC • Waterloo
+              Intelligent Data Science Lab · Western
             </Typography>
           </Box>
 

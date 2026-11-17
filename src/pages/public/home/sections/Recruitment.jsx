@@ -59,16 +59,7 @@ const Recruitment = () => {
     <SectionWrapper showBottomLine={false}>
       {/* Section Header */}
       <Box sx={{ mb: 4.5 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25, mb: 1 }}>
-          <Box
-            sx={{
-              width: '8px',
-              height: '8px',
-              borderRadius: '50%',
-              backgroundColor: '#10B981',
-              boxShadow: '0 0 10px #10B981',
-            }}
-          />
+        <Box sx={{ mb: 1 }}>
           <Typography
             variant="caption"
             sx={{

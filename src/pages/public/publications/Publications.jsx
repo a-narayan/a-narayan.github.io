@@ -205,16 +205,7 @@ const Publications = () => {
       >
         <SectionWrapper showBottomLine={false}>
           <Box sx={{ maxWidth: '900px' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25, mb: 1.5 }}>
-              <Box
-                sx={{
-                  width: '8px',
-                  height: '8px',
-                  borderRadius: '50%',
-                  backgroundColor: '#3B82F6',
-                  boxShadow: '0 0 10px #3B82F6',
-                }}
-              />
+            <Box sx={{ mb: 1.5 }}>
               <Typography
                 variant="caption"
                 sx={{
