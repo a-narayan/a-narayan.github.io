@@ -16,3 +16,5 @@ export { default as Footer } from './Footer.jsx';
 export { default as NewsArticleBanner } from './NewsArticleBanner.jsx';
 export { default as PublicationBanner } from './PublicationBanner.jsx';
 export { default as MessageDialog } from './MessageDialog.jsx';
+export { default as ThemeToggle } from './ThemeToggle.jsx';
+export { default as CyberHeroCanvas } from './CyberHeroCanvas.jsx';

@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* DeepMind Inspired Utility Styles */
+.glow-text-primary {
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.glow-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.glow-card:hover {
+  transform: translateY(-4px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Glassmorphism helpers */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-.App-link {
-  color: #61dafb;
+/* Dynamic HTML & Quill Content Dark/Light Theme Normalization */
+.dynamic-html-content {
+  color: inherit;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dynamic-html-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.dynamic-html-content h1,
+.dynamic-html-content h2,
+.dynamic-html-content h3,
+.dynamic-html-content h4 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dynamic-html-content ul,
+.dynamic-html-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dynamic-html-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* DARK MODE OVERRIDES FOR USER-GENERATED HTML & QUILL CONTENT */
+[data-theme="dark"] .dynamic-html-content,
+[data-theme="dark"] .dynamic-html-content * {
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .dynamic-html-content,
+[data-theme="dark"] .dynamic-html-content p,
+[data-theme="dark"] .dynamic-html-content li,
+[data-theme="dark"] .dynamic-html-content div,
+[data-theme="dark"] .dynamic-html-content span {
+  color: #E2E8F0 !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .dynamic-html-content h1,
+[data-theme="dark"] .dynamic-html-content h2,
+[data-theme="dark"] .dynamic-html-content h3,
+[data-theme="dark"] .dynamic-html-content h4,
+[data-theme="dark"] .dynamic-html-content h5,
+[data-theme="dark"] .dynamic-html-content h6,
+[data-theme="dark"] .dynamic-html-content strong,
+[data-theme="dark"] .dynamic-html-content b {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .dynamic-html-content a {
+  color: #60A5FA !important;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .dynamic-html-content a:hover {
+  color: #93C5FD !important;
+}
+
+/* LIGHT MODE STYLES */
+[data-theme="light"] .dynamic-html-content,
+[data-theme="light"] .dynamic-html-content p,
+[data-theme="light"] .dynamic-html-content li,
+[data-theme="light"] .dynamic-html-content div {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .dynamic-html-content h1,
+[data-theme="light"] .dynamic-html-content h2,
+[data-theme="light"] .dynamic-html-content h3,
+[data-theme="light"] .dynamic-html-content h4,
+[data-theme="light"] .dynamic-html-content strong {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .dynamic-html-content a {
+  color: #1D4ED8 !important;
+  text-decoration: underline;
 }

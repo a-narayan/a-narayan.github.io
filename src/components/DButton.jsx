@@ -1,6 +1,6 @@
-import { Button } from '@mui/material'
-import React from 'react'
-import colors from '../constants/colors'
+import { Button } from '@mui/material';
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
 
 const DButton = ({
   children,
@@ -8,11 +8,21 @@ const DButton = ({
   variant = 'contained',
   isLoading = false,
   fullWidth = false,
-  fontSize = '16px',
-  padding = undefined,
-  backgroundColor = colors.dColor3,
-  color = '#fff',
+  fontSize = '0.925rem',
+  padding = '8px 22px',
+  backgroundColor,
+  color,
+  sx = {},
 }) => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
+
+  const defaultBg = variant === 'contained'
+    ? (backgroundColor || theme.palette.primary.main)
+    : 'transparent';
+
+  const defaultColor = color || (variant === 'contained' ? '#FFFFFF' : theme.palette.primary.main);
+
   return (
     <Button
       variant={variant}
@@ -24,19 +34,24 @@ const DButton = ({
         p: padding,
         textTransform: 'none',
         fontSize: fontSize,
-        backgroundColor: variant === 'contained' ? backgroundColor : 'white',
-        color: color,
-        borderRadius: '10px',
-        border: variant === 'outlined' && `1px ${colors.dColor4} solid`,
-        ':hover': {
-          backgroundColor: variant === 'outlined' ? '' : '#eee',
-          color: '#444',
-        }
+        fontWeight: 600,
+        borderRadius: '9999px',
+        backgroundColor: defaultBg,
+        color: defaultColor,
+        border: variant === 'outlined' ? `1px solid ${theme.palette.primary.main}` : 'none',
+        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+        '&:hover': {
+          backgroundColor: variant === 'contained'
+            ? theme.palette.primary.dark
+            : (isDark ? 'rgba(59, 130, 246, 0.1)' : 'rgba(29, 78, 216, 0.08)'),
+          transform: 'translateY(-1px)',
+        },
+        ...sx,
       }}
     >
       {children}
     </Button>
-  )
-}
+  );
+};
 
-export default DButton
+export default DButton;

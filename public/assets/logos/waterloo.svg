@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 48" fill="none">
+  <path d="M6 6H38C38 22 30 36 22 42C14 36 6 22 6 6Z" fill="#1A1A1A" />
+  <path d="M7 7H37V16L22 25L7 16V7Z" fill="#FFD54F" />
+  <path d="M7 16L22 25L37 16V24L22 33L7 24V16Z" fill="#E2231A" />
+  <text x="48" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="900" letter-spacing="1.2" fill="#0F172A">WATERLOO</text>
+</svg>

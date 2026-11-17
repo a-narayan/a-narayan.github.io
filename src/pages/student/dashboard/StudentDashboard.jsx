@@ -82,12 +82,13 @@ const StudentDashboard = () => {
   useEffect(() => {
     if (userData.id !== params.userId || userData.userType !== 'student' || !userData.isLoggedIn) {
       navigate('/login');
+      return;
     }
     if (!fetchedData) {
       fetchUserData();
       setFetchedData(true);
     }
-  });
+  }, [userData.id, userData.userType, userData.isLoggedIn, params.userId, fetchedData, navigate]);
 
   return (
     <SectionWrapper showBottomLine={false}>

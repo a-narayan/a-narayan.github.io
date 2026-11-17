@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <path d="M6 6H38C38 22 30 36 22 42C14 36 6 22 6 6Z" fill="#002145" />
+  <circle cx="22" cy="18" r="6" fill="#EAA11F" />
+  <path d="M12 18H32M22 8V18M15 11L29 25M29 11L15 25" stroke="#EAA11F" stroke-width="1.5" />
+  <path d="M9 24C13 22 16 25 22 24C28 22 31 25 35 24" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <path d="M11 29C15 27 18 30 22 29C26 27 29 30 33 29" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <text x="48" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="1" fill="#002145">UBC</text>
+</svg>

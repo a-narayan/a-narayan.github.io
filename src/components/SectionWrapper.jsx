@@ -1,21 +1,31 @@
-import { Container, Divider } from '@mui/material'
-import React from 'react'
-import SizedBox from './SizedBox'
+import { Container, Divider, Box } from '@mui/material';
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
 
 const SectionWrapper = ({
-    id,
-    flexDirection = 'column',
-    maxWidth = 'xl',
-    showBottomLine = true,
-    children
+  id,
+  maxWidth = 'xl',
+  showBottomLine = true,
+  children,
+  sx = {},
 }) => {
-    return (
-        <Container maxWidth={maxWidth} sx={{ pt: '2rem', pb: '1rem', }}>
-            {children}
-            <SizedBox height={'1.5rem'} />
-            {showBottomLine && <div style={{ width: '100%', height: '2px', backgroundColor: '#eee' }} />}
-        </Container>
-    )
-}
+  const theme = useTheme();
 
-export default SectionWrapper
+  return (
+    <Box id={id} component="section" sx={{ width: '100%', py: { xs: 3, md: 4.5 }, ...sx }}>
+      <Container maxWidth={maxWidth}>
+        {children}
+        {showBottomLine && (
+          <Divider
+            sx={{
+              mt: { xs: 4, md: 5 },
+              borderColor: theme.palette.divider,
+            }}
+          />
+        )}
+      </Container>
+    </Box>
+  );
+};
+
+export default SectionWrapper;

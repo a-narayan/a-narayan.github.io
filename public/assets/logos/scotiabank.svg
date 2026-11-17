@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" fill="none">
+  <circle cx="24" cy="24" r="18" fill="#EC111A" />
+  <path d="M16 30C18 32 24 32 26 30C28.5 27.5 26.5 25 24 24C20 22.5 18 20 20 18C22 16 27 16 29 18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+  <text x="50" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#0F172A">Scotiabank</text>
+</svg>
